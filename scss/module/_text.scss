@@ -1,0 +1,40 @@
+//Text elements style global
+
+h1 {
+    @include text($text-size--x-large, $text_line--very-large, $custom-light-font-family);
+    color: $color-dark-blue;
+    margin-bottom: 15px;
+
+    @media #{$small-up}{
+        @include text($text-size--xx-large, $text-line--x-large, $custom-light-font-family);
+    }
+}
+
+h2 {
+	@include text($text-size--very-large, $text_line--very-large, $custom-light-font-family);
+    color: $color-dark-blue;
+    margin-bottom: 15px;
+}
+
+h3 {
+	@include text($text-size--medium, $text_line--large, $custom-light-font-family);
+    color: $color-dark-blue;
+    margin-bottom: 15px;
+
+    @media #{$small-up}{
+        @include text($text-size--large, $text_line--large, $custom-light-font-family);
+    }
+}
+
+h4 {
+
+    @include text($text-size--small-medium, $text_line--small, $custom-light-font-family);
+    color: $color-dark-blue;
+    margin-bottom: 15px;
+}
+
+p {
+	@include text($text-size--small, $text_line--small, $custom-light-font-family);
+    color: $color-black;
+    margin-bottom: 10px;
+}

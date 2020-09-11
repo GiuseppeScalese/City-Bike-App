@@ -1,0 +1,84 @@
+//Colours variables
+$color-white: #FFFFFF;
+$color-black: #000000;
+$color-slate-grey: #333F48;
+$color-light-grey: #EDEDED;
+$color-grey: #F4F4F4;
+$color-light-cream: #FAFAF9;
+$color-light-grey :#F7F7F7;
+$color-faint-black: #333333;
+$color-light-green:#A5DBDB;
+$color-faint-grey: #D1D1D1;
+$color-soft-grey: #878788;
+$color-night-blue: #2C284F;
+$color-pink: #F7A7A3;
+$color-dark-blue: #2C2750;
+
+$color-warning-message:#FF0000;
+
+//background colours
+$bg-color--black:#000000;
+$bg-color--white:#ffffff;
+$bg-color--light-green:#A7DBDA;
+$bg-color--dark-grey:#525252;
+$bg-color--light-grey:#FAFAFD;
+$bg-color--mild-blue:#1B3F8B;
+$bg-color--light-blue:#4D6FAC;
+$bg-color--night-blue: #000034;
+$bg-color--very-dark-blue:#0f0e1e;
+$bg-color--mild-green:#2A8E82;
+
+//font type 
+$custom-font-regular:'FSElliotWeb-Regular';
+$custom-font-bold:'FSElliotWeb-Bold';
+$custom-font-light:'FSElliotWeb-Light';
+
+//base font variables
+$base-font-family: Verdana, Helvetica, sans-serif, Arial;
+$custom-regular-font-family: $custom-font-regular, Verdana, Helvetica, sans-serif, Arial;
+$custom-bold-font-family: $custom-font-bold, Verdana, Helvetica, sans-serif, Arial;
+$custom-light-font-family: $custom-font-light, Verdana, Helvetica, sans-serif, Arial;
+$custom-base-font-color--white:#ffffff;
+$base-font-size: 10px;
+$text-size--x-small: 12px;
+$text-size--small: 15px;
+$text-size--small-medium: 18px;
+$text-size--medium: 22px;
+$text-size--large: 30px;
+$text-size--very-large: 40px;
+$text-size--x-large: 50px;
+$text-size--xx-large: 60px;
+$text-size--xxx-large: 75px;
+$base_line: 20px;
+$text_line--small: 25px;
+$text_line--medium: 30px;
+$text_line--large: 36px;
+$text_line--very-large: 45px;
+$text_line--x-large: 60px;
+$text-color-base:#000000;
+
+//buttons colours
+$button-purple: #9A68C7;
+$button-blue: #2C2750;
+$button-green: #75B343;
+$button-orange: #FF6A42;
+$button-white: #FFFFFF;
+
+//button base font size
+$button-base-font-size: 13px;
+
+//hover anchor transition speed variable
+$hover-anchor-transition_speed: .4s;
+
+//screen size variables
+$desktop-screen--large: 980px;
+$desktop-screen--x-large: 1280px;
+
+// Media queries
+$x-small: "only screen and (min-width: 480px)";
+$x-small-landscape: "only screen and (min-width: 480px) and (orientation: landscape)";
+$l-small: "only screen and (min-width:768px)";
+$small-up: "only screen and (min-width: 769px)";
+$medium-up: "only screen and (min-width: 992px)";
+$large-up: "only screen and (min-width: 1300px)";
+$x-large-up: "only screen and (min-width: 1600px)";

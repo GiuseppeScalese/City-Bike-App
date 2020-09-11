@@ -1,0 +1,57 @@
+@include font-face($custom-font-regular, "../fonts", $custom-font-regular);
+@include font-face($custom-font-bold, "../fonts", $custom-font-bold);
+@include font-face($custom-font-light, "../fonts", $custom-font-light);
+
+body{
+	color: $color-faint-black;
+	background: $bg-color--white;
+	font-family: $custom-light-font-family;
+	height: 88%;
+
+	@media #{$small-up}{
+    	height: 90%;
+    }
+}
+
+#wrapper{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+
+	.error{
+		display: none;
+	  	position: fixed;
+	    top: 50%;
+	    left: 50%;
+	    transform: translate(-50%, -65%);
+		background-color: #ffffff;
+		width: 90%;
+		height: 30%;
+		@include font-size(17px);
+		font-weight: bold;
+		padding: 20px;
+		line-height: 23px;
+		overflow: auto;
+
+    	@media #{$small-up}{
+    		width: 60%;
+    	}
+
+    	h4{
+    		margin-bottom: 7px;
+    		@media #{$small-up}{
+    			@include font-size(20px);
+    		}
+    	}
+
+		p{
+			color: $color-warning-message;
+		 	padding-top: 5px;
+		 	line-height: 16px;
+		 	
+		 	@media #{$small-up}{
+    			@include font-size(17px);
+    		}
+		}
+	}
+}

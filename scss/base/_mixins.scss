@@ -1,0 +1,122 @@
+//Link hover transition mixin
+@mixin hover-transition($color, $transition_speed){
+  -webkit-transition: color $transition_speed ease,text-decoration $transition_speed ease ;
+  -moz-transition: color $transition_speed ease,text-decoration $transition_speed ease ;
+  -o-transition: color $transition_speed ease,text-decoration $transition_speed ease ;
+  -ms-transition: color $transition_speed ease,text-decoration $transition_speed ease ;
+  transition: color $transition_speed ease, text-decoration $transition_speed ease ;
+}
+
+
+//buttons style and buttons states mixins
+@mixin btn-theme($btn-color){
+  background-color: $btn-color;
+  &:active {
+     box-shadow: 0 .063em $color-white, inset 0 0 1.094em darken($btn-color, 40%), inset 0 .063em darken($btn-color, 20%),inset 0 -0.188em darken($btn-color, 20%); 
+  }
+  &:after{
+    display: block;
+    content: '\203a';
+    height: 10px;
+    width: 10px;
+    background-size: 10px;
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 17px;
+  }
+}
+
+//mixing for colour gradient
+@mixin linear-gradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  $top 0%,$bottom 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+//mixin for rounded corners
+@mixin rounded-corners($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+//mixin for transitions
+@mixin transition($val...){
+  -webkit-transition: $val;
+  -moz-transition: $val;
+  -o-transition: $val;
+  transition: $val;
+}
+
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+//clearfix
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+//text mixin
+@mixin text($size, $line, $family) {
+    @include font-size($size);
+    line-height: ($line/$size);
+    font-family: $family;
+}
+
+//font-size mixin - Fallback when pixel isn't supported in IE8 and below
+@function calculateRem($size) {
+  $remSize: $size / $base-font-size;
+  @return #{$remSize}rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size; //Fallback in px
+  font-size: calculateRem($size);
+}
+
+//font face mixin
+@mixin font-face($font-face-family, $folder, $font-face-filename, $font-face-weight : normal, $font-face-style :normal, $font-stretch : normal) {
+  @font-face {
+    font-family: $font-face-family;
+    src: url('#{$folder}/#{$font-face-filename}.eot');  // IE9 compat
+    src: url('#{$folder}/#{$font-face-filename}.eot?#iefix') format('embedded-opentype'), // IE8 and below
+         url('#{$folder}/#{$font-face-filename}.ttf') format("truetype"), // Safari, Android, iOS
+         url('#{$folder}/#{$font-face-filename}.otf') format("otf"),
+         url('#{$folder}/#{$font-face-filename}.woff') format("woff"); // standards
+    font-style: $font-face-style;
+    font-weight: $font-face-weight;
+  }
+}

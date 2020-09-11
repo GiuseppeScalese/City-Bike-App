@@ -1,0 +1,80 @@
+//Button style global
+
+.btn{
+	position: relative;
+	display: inline-block;
+	//padding: .938em 1.875em;
+	padding: 10px;
+	padding-right: 30px;
+	border: 2px solid; 
+	@include rounded-corners(.625em);
+	@include transition(0.2s ease-in-out); 
+//	box-shadow: 0 .375em .313em -.313em rgba(black,.8), inset 0 .063em $white, inset 0 -.188em rgba(black,.15);
+	font-weight: bold;
+	font-family: $custom-regular-font-family;
+	@include font-size($button-base-font-size);
+
+	text: {
+		//transform: uppercase;
+		decoration: none;
+		//shadow: 0 .063em rgba(black,.3);
+	}
+  	cursor:pointer;
+
+
+  	//Themes 
+	&--blue, &--blue-no-icon {
+		@include btn-theme($button-blue);
+		color: $button-white;
+		border-color: $button-white;
+	}
+
+	&--blue-transparent, &--blue-transparent-no-icon {
+		@include btn-theme($button-blue);
+		color: $color-dark-blue;
+		border-color: $button-blue;
+		background: transparent;
+	}
+
+	&--white, &--white-no-icon  {
+		@include btn-theme($button-white);
+		border-color: $button-blue;
+		color: $button-blue;
+	}
+
+	&--white-no-icon, &--blue-no-icon, &--blue-transparent-no-icon{
+		padding-right: 10px;
+
+		&:after{
+			content: '';
+		};
+	}
+
+	&--purple {
+		@include btn-theme($button-purple);
+	}
+ 
+	&--green {
+		@include btn-theme($button-green);
+	}
+
+	&--orange {
+		@include btn-theme($button-orange);
+	}
+
+	&--small {
+    	font-size: 50%;
+	}
+
+	&--medium {
+	   	font-size: 70%;
+	}
+
+	&--large {
+	    font-size: 90%;
+	}
+}
+
+
+
+
